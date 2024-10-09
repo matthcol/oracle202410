@@ -18,33 +18,13 @@ create view movie_director as
 -- accorder ses droits à 1 nouvel utilisateur movieredactor
 
 -- Query:
-select m.id, m.title, m.year, m.duration_mn, m.synopsis, m.poster_uri
-from movies m 
-where m.year = extract(year from sysdate);
+create view current_movies as
+    select m.id, m.title, m.year, m.duration_mn, m.synopsis, m.poster_uri
+    from movies m 
+    where m.year = extract(year from sysdate)
+with check option;
 
--- Tests
-insert into movies -- remplacer movies par le nom de la vue
-    (title, year) values ('Joker: Folie à deux', 2024);
-insert into movies (title, year, duration) 
-    values ('Beetlejuice Beetlejuice', 2024, 105);
-
-update movies -- ou nom de la vue
-set duration = 138
-where id = xxxxx;
-
--- on veut interdire les suivantes:
-update movies -- ou nom de la vue
-set year = 2032
-where id = xxxxx;
-
-update movies -- ou nom de la vue
-set title = 'bad movie'
-where id = xxxxx;
-
-delete movies -- ou nom de la vue
-where id = xxxx;
-
-
-
-
+grant select, insert, update(duration_mn, synopsis, poster_uri)
+on current_movies
+to movieredactor;
 

@@ -1,0 +1,4 @@
+JOB_NAME=imp_table_play
+DUMPFILE=backup_movie.dump
+LOGFILE=imp_table_play.log
+TABLES=movie.play

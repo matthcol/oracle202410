@@ -1,0 +1,5 @@
+SCHEMAS=MOVIE,MOVIEREADER,MOVIEREDACTOR
+DUMPFILE=backup_movie.dump
+LOGFILE=backup_movie.log
+REUSE_DUMPFILES=YES
+JOB_NAME=export_schema_movie_etc

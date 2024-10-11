@@ -1,0 +1,11 @@
+run {
+	set until  time "to_date('10/10/2024 14:15:00', 'DD/MM/YYYY HH24:MI:SS')";
+	restore database;
+	recover database; 
+}
+
+
+
+
+
+

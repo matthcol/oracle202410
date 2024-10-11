@@ -1,0 +1,3 @@
+SCHEMAS=MOVIE,MOVIEREADER,MOVIEREDACTOR
+DUMPFILE=backup_movie.dump
+LOGFILE=backup_movie.log

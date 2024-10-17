@@ -4,7 +4,8 @@ declare
     -- franchise varchar2(300) := 'Les Gendarmes ';
     -- franchise varchar2(300) := 'Fast and Furious ';
     -- franchise varchar2(300) := 'Star Wars ';
-    franchise varchar2(300) := 'Rambo ';
+    -- franchise varchar2(300) := 'Rambo ';
+    -- franchise varchar2(300) := 'James Bond ';
     nb number := 100;
 begin
     for i in 1 .. nb loop

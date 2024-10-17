@@ -25,3 +25,6 @@ expdp ATTACH=export_schema_movie_etc
 # Restore avec dump
 # on a perdu la table play
 impdp PARFILE=imp_table_play.param
+
+# transfert fichier dump/paramétrage ou drag/drop
+scp .\imp_table_movie_remap.param  srvadmin@192.168.56.104:/tmp/import

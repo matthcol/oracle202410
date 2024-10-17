@@ -1,0 +1,8 @@
+JOB_NAME=imp_table_movie_remap
+DIRECTORY=IMPORT_DIR
+DUMPFILE=BACKUP_MOVIE.DUMP
+LOGFILE=imp_table_movie_remap.log
+TABLES=movie.movies
+EXCLUDE=CONSTRAINT
+EXCLUDE=REF_CONSTRAINT
+REMAP_TABLE=movie.movies:movies2
